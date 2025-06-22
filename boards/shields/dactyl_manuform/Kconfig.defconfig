@@ -1,4 +1,4 @@
-if SHIELD_DACTYL_MANUFORM_LEFT
+if SHIELD_DACTYL_MANUFORM_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "Dactyl Manuform"
