@@ -20,6 +20,8 @@
 ---
 include:
   - board: nice_nano
-    shield: iris_left
+    shield: dactyl_manuform_left
   - board: nice_nano
-    shield: iris_right
+    shield: dactyl_manuform_right
+  - board: nice_nano
+    shield: settings_reset
