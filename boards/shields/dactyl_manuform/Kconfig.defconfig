@@ -8,18 +8,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-# Note: To use the right side as the central side instead of the left side,
-# comment out the above ZMK_SPLIT_ROLE_CENTRAL for left and uncomment below:
-# if SHIELD_DACTYL_MANUFORM_RIGHT
-# 
-# config ZMK_KEYBOARD_NAME
-#     default "Dactyl Manuform"
-# 
-# config ZMK_SPLIT_ROLE_CENTRAL
-#     default y
-# 
-# endif
-
 if SHIELD_DACTYL_MANUFORM_LEFT || SHIELD_DACTYL_MANUFORM_RIGHT
 
 config ZMK_SPLIT
