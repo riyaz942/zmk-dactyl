@@ -20,10 +20,3 @@ config ZMK_SPLIT
     default y
 
 endif
-
-if SHIELD_DACTYL_MANUFORM_LEFT
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
-
-endif
