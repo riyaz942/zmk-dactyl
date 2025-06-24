@@ -3,6 +3,9 @@ config ZMK_KEYBOARD_NAME
 
 if SHIELD_DACTYL_MANUFORM_LEFT
 
+config ZMK_USB
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
