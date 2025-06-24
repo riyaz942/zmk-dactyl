@@ -1,12 +1,12 @@
 config ZMK_KEYBOARD_NAME
     default "Dactyl Manuform"
-    
+
 if SHIELD_DACTYL_MANUFORM_LEFT
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-CONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 1
 endif
 
