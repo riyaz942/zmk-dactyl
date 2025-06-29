@@ -20,16 +20,16 @@
          &kp Z        &kp X        &kp C         &kp V         &kp B                                &kp N            &kp M           &kp COMMA      &kp DOT         &kp SLASH  
                        &kp LBKT    &kp RBKT                                                                                          &kp MINUS      &kp EQUAL
                                          &kp SPACE &kp TAB                                            &kp BSPC  &kp ENTER
-                                                         &mo LOWER     &kp BSPC             &kp DEL       &mo RAISE
-                                                         &kp GRAVE     &kp LGUI             &kp END       &mo LOWER
+                                                         &mo RAISE     &mo LOWER             &mo LOWER       &mo RAISE
+                                                         &kp ADJUST    &kp ESC              &kp ESC       &mo ADJUST
             >;
         };
 
         lower_layer {
             bindings = <
                 &trans &trans &trans &trans &trans                       &kp C_VOL_UP   &trans       &kp UP    &trans    &kp PG_UP
-                &trans &kp PSCRN &trans &trans &trans                    &kp C_VOL_DN     &kp LEFT     &kp DOWN  &kp RIGHT &kp PG_DN
-                &trans &trans &trans &trans &trans                       &kp C_MUTE   &trans       &trans    &trans    &trans
+                &kp CAPS &kp PSCRN &trans &trans &trans                    &kp C_VOL_DN     &kp LEFT     &kp DOWN  &kp RIGHT &kp PG_DN
+                &trans &trans &trans &trans &trans                       &kp C_MUTE   &kp HOME       &kp END    &kp INS    &kp DEL
                        &trans &trans                                                    &trans       &trans
                                      &trans &trans                       &trans &trans
                                             &trans &trans         &trans &trans
