@@ -20,7 +20,7 @@
          &kp Z        &kp X        &kp C         &kp V         &kp B                                &kp N            &kp M           &kp COMMA      &kp DOT         &kp SLASH  
                        &kp LBKT    &kp RBKT                                                                                          &kp MINUS      &kp EQUAL
                                          &kp SPACE &kp TAB                                            &kp BSPC  &kp ENTER
-                                                         &mo LOWER     &kp DEL              &kp DEL       &mo RAISE
+                                                         &mo LOWER     &kp BSPC             &kp DEL       &mo RAISE
                                                          &kp GRAVE     &kp LGUI             &kp END       &mo LOWER
             >;
         };
