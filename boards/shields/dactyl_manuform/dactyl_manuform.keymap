@@ -9,6 +9,13 @@
 #define RAISE 2
 #define ADJUST 3
 
+&mt {
+  flavor = "balanced";
+  tapping-term-ms = <280>;
+  quick-tap-ms = <75>;
+};
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -19,9 +26,9 @@
                 &mt LSHFT A  &mt LCTRL S  &mt LALT D    &mt LGUI F    &kp G                                &kp H            &mt RGUI J      &mt RALT K     &mt RCTRL L     &mt RSHFT SEMICOLON
                 &kp Z        &kp X        &kp C         &kp V         &kp B                                &kp N            &kp M           &kp COMMA      &kp DOT         &kp SLASH
                          &kp LBKT    &kp RBKT                                                                                          &kp MINUS      &kp EQUAL
-                                         &kp SPACE &kp TAB                                            &kp BSPC  &kp ENTER
+                                         &kp SPACE &kp TAB                                            &kp BSPC  &kp SPACE
                                                          &mo RAISE     &mo LOWER             &mo LOWER       &mo RAISE
-                                                         &kp ADJUST    &kp ESC              &kp ESC       &mo ADJUST
+                                                         &mo ADJUST    &kp ESC               &kp ENTER       &mo ADJUST
             >;
         };
 
