@@ -21,6 +21,14 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // Q W E R T                          Y U I O P
+            // A S D F G                          H J K L ;
+            // Z X C V B                          N M , . /
+            //     [ ]                                - =
+            //         SPACE TAB              BSPC SPACE
+            //             RAISE LOWER    LOWER RAISE
+            //             ADJUST ESC     ENTER ADJUST
             bindings = <
                 &kp Q        &kp W        &kp E         &kp R         &kp T                                &kp Y            &kp U           &kp I          &kp O           &kp P
                 &mt LSHFT A  &mt LCTRL S  &mt LALT D    &mt LGUI F    &kp G                                &kp H            &mt RGUI J      &mt RALT K     &mt RCTRL L     &mt RSHFT SEMICOLON
@@ -33,6 +41,14 @@
         };
 
         lower_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // - - - - -                          VOL+ - UP - PGUP
+            // - - - - -                          VOL- LEFT DOWN RIGHT PGDN
+            // CAPS PSCRN PREV PP NEXT            MUTE HOME END INS DEL
+            //     - -                                - -
+            //         - -                      - -
+            //             - -    - -
+            //             - -    - -
             bindings = <
                 &trans       &trans       &trans       &trans       &trans                                &kp C_VOL_UP     &trans          &kp UP        &trans        &kp PG_UP
                 &trans       &trans       &trans       &trans       &trans                                &kp C_VOL_DN     &kp LEFT        &kp DOWN      &kp RIGHT     &kp PG_DN
@@ -45,6 +61,14 @@
         };
 
         raise_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // ! @ # $ %                          ^ & * ( )
+            // 1 2 3 4 5                          6 7 8 9 0
+            // - - - - -                          - - - ' \
+            //     - -                                - -
+            //         - -                      - -
+            //             - -    - -
+            //             - -    - -
             bindings = <
                 &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                             &kp CARET       &kp AMPS        &kp ASTRK     &kp LPAR      &kp RPAR
                 &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                                &kp N6          &kp N7          &kp N8        &kp N9        &kp N0
@@ -57,6 +81,14 @@
         };
 
         adjust_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // F1 F2 F3 F4 F5                      F6 F7 F8 F9 F10
+            // BT0 BT1 BT2 BT3 BT4                 - - - F11 F12
+            // USB BLE - - -                       - - - - -
+            //     BT_CLR BT_CLR_ALL                   - -
+            //         - -                      - -
+            //             - -    - -
+            //             - -    - -
             bindings = <
                 &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                                &kp F6          &kp F7          &kp F8        &kp F9        &kp F10
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                          &none           &none           &none         &kp F11       &kp F12
