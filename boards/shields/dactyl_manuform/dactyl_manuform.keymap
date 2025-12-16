@@ -3,11 +3,15 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
 #define ADJUST  3
+
+// Mouse movement speed (adjust as needed: 400-800 slow, 1000-1500 medium, 2000+ fast)
+#define MOUSE_MOVE_SPEED 1500
 
 &mt {
     flavor = "balanced";
