@@ -1,0 +1,106 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define ADJUST  3
+
+// Mouse movement speed (adjust as needed: 400-800 slow, 1000-1500 medium, 2000+ fast)
+#define MOUSE_MOVE_SPEED 1500
+
+&mt {
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <75>;
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // Q W E R T                          Y U I O P
+            // A S D F G                          H J K L ;
+            // Z X C V B                          N M , . /
+            //     [ ]                                - =
+            //         SPACE TAB              BSPC SPACE
+            //             RAISE LOWER    LOWER RAISE
+            //             ADJUST ESC     ENTER ADJUST
+            bindings = <
+                &kp Q        &kp W        &kp E        &kp R        &kp T                    &kp Y      &kp U        &kp I        &kp O        &kp P
+                &mt LSHFT A  &mt LCTRL S  &mt LALT D   &mt LGUI F   &kp G                    &kp H      &mt RGUI J   &mt RALT K   &mt RCTRL L  &mt RSHFT SEMICOLON
+                &kp Z        &kp X        &kp C        &kp V        &kp B                    &kp N      &kp M        &kp COMMA    &kp DOT      &kp SLASH
+                             &kp LBKT     &kp RBKT                                                                   &kp MINUS    &kp EQUAL
+                                          &kp SPACE    &kp TAB                               &kp BSPC   &kp SPACE
+                                                       &mo RAISE    &mo LOWER                &mo LOWER  &mo RAISE
+                                                       &mo ADJUST   &kp ESC                  &kp ENTER  &mo ADJUST
+            >;
+        };
+
+        lower_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // - - - - -                          VOL+ - UP - PGUP
+            // - - - - -                          VOL- LEFT DOWN RIGHT PGDN
+            // CAPS PSCRN PREV PP NEXT            MUTE HOME END INS DEL
+            //     - -                                - -
+            //         - -                      - -
+            //             - -    - -
+            //             - -    - -
+            bindings = <
+                &trans       &trans       &trans       &trans       &trans                   &kp C_VOL_UP  &trans      &kp UP       &trans       &kp PG_UP
+                &trans       &trans       &trans       &trans       &trans                   &kp C_VOL_DN  &kp LEFT    &kp DOWN     &kp RIGHT    &kp PG_DN
+                &kp CAPS     &kp PSCRN    &kp C_PREV   &kp C_PP     &kp C_NEXT               &kp C_MUTE    &kp HOME    &kp END      &kp INS      &kp DEL
+                             &trans       &trans                                                                       &trans       &trans
+                                          &trans       &trans                                &trans        &trans
+                                                       &trans       &trans                   &trans        &trans
+                                                       &trans       &trans                   &trans        &trans
+            >;
+        };
+
+        raise_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // ! @ # $ %                          ^ & * ( )
+            // 1 2 3 4 5                          6 7 8 9 0
+            // - - - - -                          - - - ' \
+            //     - -                                - -
+            //         - -                      - -
+            //             - -    - -
+            //             - -    - -
+            bindings = <
+                &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                &kp CARET     &kp AMPS    &kp ASTRK    &kp LPAR         &kp RPAR
+                &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                   &kp N6        &kp N7      &kp N8       &kp N9           &kp N0
+                &trans       &trans       &trans       &trans       &trans                   &trans        &trans      &trans       &kp SINGLE_QUOTE &kp BSLH
+                             &trans       &trans                                                                       &trans       &trans
+                                          &trans       &trans                                &trans        &trans
+                                                       &trans       &trans                   &trans        &trans
+                                                       &trans       &trans                   &trans        &trans
+            >;
+        };
+
+        adjust_layer {
+            // Left Hand Keys:                    Right Hand Keys:
+            // F1 F2 F3 F4 F5                      F6 F7 F8 F9 F10
+            // BT0 BT1 BT2 BT3 BT4                 - - - F11 F12
+            // USB BLE - - -                       - - - - -
+            //     BT_CLR BT_CLR_ALL                   - -
+            //         - -                      - -
+            //             - -    - -
+            //             - -    - -
+            bindings = <
+                &none        &none        &none        &none        &none                    &none         &none           &mmv MOVE_UP    &none            &none
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+                &out OUT_USB &out OUT_BLE &bt BT_CLR   &none        &bt BT_CLR_ALL           &none         &none           &none           &none            &none
+                             &mkp LCLK    &mkp RCLK                                                                        &kp GLOBE       &none
+                                          &none        &none                                 &none         &none
+                                                       &none        &none                    &none         &none
+                                                       &none        &none                    &none         &none
+            >;
+        };
+    };
+};
