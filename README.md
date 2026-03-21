@@ -1,6 +1,6 @@
 # Dactyl Manuform 4x5 — LOTR Themed ZMK Keyboard
 
-A hand-wired, split ergonomic keyboard built on the Dactyl Manuform 4x5 layout, running [ZMK firmware](https://zmk.dev/) on nice!nano controllers. The case is 3D-printed and painted with a Lord of the Rings theme, featuring Elvish script, the White Tree of Gondor, and LOTR keycaps from Drop.
+A hand-wired, split ergonomic keyboard built on the Dactyl Manuform 4x5 layout, running [ZMK firmware](https://zmk.dev/) on nice!nano controllers. The case is 3D-printed and painted with a Lord of the Rings theme, featuring Elvish script, the White Tree of Gondor, and LOTR keycaps from Drop. The firmware uses **[home row mods](https://zmk.dev/docs/behaviors/mod-tap)** (mod-tap): Shift, Ctrl, Alt, and Gui live on the home row so you hold for the modifier and tap for the letter.
 
 ![Keyboard top view](images/keyboard-top-view.png)
 
@@ -22,6 +22,7 @@ Hand-wired matrix with diodes (col2row), connected to nice!nano controllers via 
 | ------------------- | --------------------------------------------------- |
 | **Layout**          | Dactyl Manuform 4x5, split                          |
 | **Keys**            | 46                                                  |
+| **Home row mods**   | Mod-tap: Shift/Ctrl/Alt/Gui on `A`–`F` and `J`–`;`  |
 | **Matrix**          | 10 columns x 5 rows                                 |
 | **Controller**      | nice!nano v2 (nRF52840)                             |
 | **Firmware**        | ZMK                                                 |
@@ -31,7 +32,7 @@ Hand-wired matrix with diodes (col2row), connected to nice!nano controllers via 
 
 ## Keymap
 
-Four layers with home-row mods on the default layer.
+Four layers. The default layer uses **home row mods** via ZMK’s `&mt` (mod-tap) behavior: the home row still types letters when tapped, but acts as modifiers when held.
 
 ### Layer 0 — Default (QWERTY)
 
